@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>InLock - Personagens</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table id="tabela-lista">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Título</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela-lista-corpo"></tbody>
+    </table>
+
+    <script>
+        const tabela = document.querySelector('#tabela-lista-corpo');
+
+        let URL = 'https://salty-atoll-57329.herokuapp.com/personagens';
+
+        fetch(URL)
+            .then(resposta => resposta.json())
+            .then(data => construirTabela(data))
+            .catch(erro => console.log(erro));
+        
+        function construirTabela(data){
+            
+            data.forEach(element =>{
+
+                console.log(element);
+
+                const tr = document.createElement('tr');
+                
+                const td_id = document.createElement('td');
+                const td_nome = document.createElement('td');
+                const td_img = document.createElement('td');
+
+                // const img = document.createElement('img');
+
+                td_id.textContent = element.id;
+                td_nome.innerText = element.nome;
+                
+
+                // img.src = element.urlImagem;
+
+                // img.setAttribute('style','width: 60px');
+
+                // td_img.appendChild(img);
+
+                td_img.innerHTML = "<img style='width:60px' src='"+element.urlImagem+"'>";
+
+                tr.appendChild(td_id);
+                tr.appendChild(td_nome);
+                tr.appendChild(td_img);
+
+                tabela.appendChild(tr);
+            });
+        }
+    </script>
+
+</body>
+</html>
