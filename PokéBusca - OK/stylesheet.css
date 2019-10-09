@@ -1,0 +1,128 @@
+*{
+    font-family: 'Righteous', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    border: none;
+}
+
+.divisoria{
+    position: fixed;
+    top: 7.5vh;
+    z-index: 10;
+    background-color:black;
+    height: 2px;
+    width: 100%;
+}
+
+.faixaVermelha{
+    position: fixed;
+    top: 3vh;
+    background-color: rgb(204, 12, 12);
+    height: 50vh;
+    width: 100%;
+    z-index: 5;
+}
+
+.faixaPreta{
+    position: fixed;
+    top: 52vh;
+    background-color: black;
+    height: 5vh;
+    width: 100%;
+    z-index: 10;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Righteous';
+    margin: 5vh 0
+}
+
+
+#busca:focus{
+    background-color: white;
+    transition: 0.25s;
+}
+
+#busca{
+    width: 80%;
+    height: 3vh;
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: -1px -1px 3px rgb(173, 173, 173),
+                1px -1px 3px rgb(173, 173, 173),
+                -1px 1px 3px rgb(173, 173, 173),
+                1px 1px 3px rgb(173, 173, 173);
+                text-align: left;
+                padding-left: 2%;
+}
+
+button{
+    width: 80%;
+    height: 3vh;
+    margin-top: 1.5vh;
+    border-radius: 5px;
+    background-color: red;
+    box-shadow: -1px -1px 1px black,
+                1px -1px 1px black,
+                -1px 1px 1px black,
+                1px 1px 1px black;
+    text-align: center;
+    color: white;
+}
+
+#topo{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.bola{
+    width: 3%;
+    height: 3%;
+    margin: 1vh 0
+}
+
+.textoPokemon{
+    width: 10%
+}
+
+#quadroBranco{
+    position: fixed;
+    top: 13.75vh;
+    left: 30%;
+    z-index: 100;
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    margin: auto;
+    height: 80vh;
+    box-shadow: 1px 1px 5px black;
+}
+
+table{
+    margin: 5vh auto;
+}
+            
+td{
+    box-shadow: -1px -1px 1px rgb(50, 50, 50),
+                1px -1px 1px rgb(50, 50, 50),
+                -1px 1px 1px rgb(50, 50, 50),
+                1px 1px 1px rgb(50, 50, 50);
+                
+}
+
+.espaco{
+    font-size: 1.2em;
+    padding: 0 15px;
+    margin: 0 -5px;
+}

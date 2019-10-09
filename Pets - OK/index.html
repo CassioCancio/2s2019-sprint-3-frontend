@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+
+    <table id="tabela-lista">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Tipo de Pet</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela-lista-corpo"></tbody>
+    </table>
+
+</body>
+
+<script>
+
+    let pets = [{
+        nome: "Doguinho A",
+        idade: 4,
+        tipoPet: "cachorro"
+    }, {
+        nome: "Doguinho B",
+        idade: 5,
+        tipoPet: "cachorro"
+    }, {
+        nome: "Doguinho C",
+        idade: 11,
+        tipoPet: "cachorro"
+    }, {
+        nome: "Gatinho A",
+        idade: 17,
+        tipoPet: "gato"
+    }, {
+        nome: "Gatinho H",
+        idade: 2,
+        tipoPet: "gato"
+    }, {
+        nome: "Passarinho A",
+        idade: 12,
+        tipoPet: "pássaro"
+    }, {
+        nome: "Doguinho Z",
+        idade: 16,
+        tipoPet: "cachorro"
+    }, {
+        nome: "Doguinho H",
+        idade: 4,
+        tipoPet: "cachorro"
+    }, {
+        nome: "Gatinho P",
+        idade: 3,
+        tipoPet: "gato"
+    }];
+
+    // Apenas gatos
+    let gatos = pets.map(element => {
+        if (element.tipoPet == "gato") {
+            return element;
+        }
+    })
+
+    // Apenas maiores de 7 anos
+    let maiorSete = pets.map(element => {
+        if (element.idade > 7) {
+            return element;
+        }
+    })
+
+    // Número de cachorros
+    let Qcachorros = pets.map(element => {
+        if (element.nome == "cachorro") {
+            return element;
+        }
+    })
+
+    const tabela = document.querySelector('#tabela-lista-corpo');
+
+    const body = document.querySelector('#body');
+
+    window.onload = () => {
+
+        // Todos os animais
+        // preencherTabela(pets)
+
+        // Apenas os gatos
+        // preencherTabela(gatos);
+
+        // Apenas maiores de 7 anos
+        // preencherTabela(maiorSete);
+
+        // Número de cachorros
+        //numeroCachorros(Qcachorros);
+
+        pets.push({
+        nome: "doguinho",
+        idade: 13,
+        tipoPet: "cachorro"
+    });
+        console.log(pets);
+
+        function preencherTabela(pets) {
+            console.log(pets);
+
+            pets.forEach((element) => {
+                if (element != null) {
+                    const tr = document.createElement('tr');
+                    const td_nome = document.createElement('td');
+                    const td_idade = document.createElement('td');
+                    const td_tipo = document.createElement('td');
+
+                    td_nome.textContent = element.nome;
+                    td_idade.textContent = element.idade;
+                    td_tipo.textContent = element.tipoPet;
+
+                    tabela.appendChild(tr);
+                    tr.appendChild(td_nome);
+                    tr.appendChild(td_idade);
+                    tr.appendChild(td_tipo);
+                }
+            });
+        }
+
+        function numeroCachorros(cachorros) {
+            console.log(cachorros);
+
+            const p_Quantidade = document.createElement('p');
+
+            p_Quantidade.textContent = cachorros.Count;
+
+            body.appendChild(p_Quantidade);
+        }
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
