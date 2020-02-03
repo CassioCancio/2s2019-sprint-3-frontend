@@ -1,0 +1,1 @@
+C:\Users\42720780898\AppData\Roaming\npm>create-react-app C:\Users\42720780898\Desktop\FrontEnd\codetur-react
